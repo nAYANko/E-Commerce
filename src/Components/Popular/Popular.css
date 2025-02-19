@@ -1,28 +1,18 @@
-.popular{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 90vh;  
-}
+@layer components {
+    .popular {
+        @apply flex flex-col items-center gap-8 py-16;
+    }
 
-.popular h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-}
+    .popular-title {
+        @apply text-5xl font-bold text-gray-900;
+    }
 
-.popular hr{
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
-}
+    .popular-divider {
+        @apply w-48 h-1.5 bg-primary-800 rounded-full;
+    }
 
-.popular-item{
-    margin-top: 50px;
-    height: 20px;
-    display: flex;
-    gap: 5px;
+    .popular-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
+           gap-8 mt-12 px-4;
+    }
 }
-
