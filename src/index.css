@@ -1,6 +1,14 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import your component CSS files */
+@import "./Components/Footer/Footer.css";
+@import "./Components/Hero/Hero.css";
+@import "./Components/Item/Item.css";
+@import "./Components/Navbar/Navbar.css";
+@import "./Components/Popular/Popular.css";
 
 @layer components {
     .btn-primary {

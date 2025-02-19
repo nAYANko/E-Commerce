@@ -1,58 +1,46 @@
 @layer components {
     .navbar {
-        @apply flex justify-between items-center px-8 py-4
-           bg-white shadow-md sticky top-0 z-50;
-    }
-
-    .nav-brand {
-        @apply flex items-center gap-3;
+        @apply flex justify-around p-4
+           bg-white shadow-[0_1px_3px_-2px_black];
     }
 
     .nav-logo {
-        @apply w-16 h-16;
+        @apply flex items-center gap-2.5;
     }
 
-    .nav-brand-text {
-        @apply text-3xl font-semibold text-gray-900;
+    .nav-logo p {
+        @apply text-[#171717] text-[38px] font-semibold;
     }
 
     .nav-menu {
-        @apply flex items-center gap-12;
+        @apply flex items-center gap-[50px] list-none
+           text-black text-xl font-medium;
     }
 
-    .nav-item {
-        @apply group relative;
+    .nav-menu li {
+        @apply relative cursor-pointer transition-colors hover:text-accent-500;
     }
 
-    .nav-link {
-        @apply text-lg font-medium text-gray-800
-           hover:text-accent-600 transition-colors;
+    .nav-menu hr {
+        @apply absolute bottom-0 left-0 w-0 h-0.5
+           bg-accent-500 transition-all duration-300;
     }
 
-    .nav-link-underline {
-        @apply h-0.5 w-0 group-hover:w-full
-           bg-accent-600 transition-all duration-300;
+    .nav-menu li:hover hr {
+        @apply w-full;
     }
 
-    .nav-actions {
+    .nav-login-cart {
         @apply flex items-center gap-8;
     }
 
-    .login-button {
+    .nav-login-cart button {
         @apply px-6 py-3 rounded-full border border-primary-300
            hover:bg-primary-50 transition-colors
            text-lg font-medium text-gray-700;
     }
 
-    .cart-container {
-        @apply relative;
-    }
-
-    .cart-icon {
-        @apply w-8 h-8;
-    }
-
-    .cart-badge {
+    .nav-cart-count {
         @apply absolute -top-2 -right-2 w-6 h-6
            flex items-center justify-center
            bg-accent-600 text-white text-sm

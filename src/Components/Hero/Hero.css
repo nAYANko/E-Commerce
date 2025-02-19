@@ -19,11 +19,7 @@
         @apply flex items-center gap-5;
     }
 
-    .hand-wave {
-        @apply w-24 animate-bounce-slow;
-    }
-
-    .hero-button {
+    .hero-latest-btn {
         @apply flex items-center justify-center gap-4
            w-80 h-16
            bg-accent-600 hover:bg-accent-700
